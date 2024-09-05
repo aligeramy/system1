@@ -1,0 +1,27 @@
+/* css/light-mode.css */
+body {
+    background-color: white;
+    color: black;
+}
+
+nav, footer, aside {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.placeholder {
+    background-color: #e0e0e0;
+    height: 50px;
+    margin-bottom: 20px;
+    animation: shimmer 1s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}

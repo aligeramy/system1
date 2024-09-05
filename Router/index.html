@@ -1,0 +1,32 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Modular Website</title>
+    <link id="theme-link" rel="stylesheet" href="css/light-mode.css"> <!-- Default to light mode -->
+</head>
+<body>
+
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
+
+    <!-- Common header component -->
+    <div data-component="header" class="placeholder"></div>
+
+    <!-- Placeholder for the menu -->
+    <div data-component="navigation/menu" class="placeholder"></div>
+
+    <!-- Placeholder for page-specific content -->
+    <div id="content-placeholder"></div>
+
+    <!-- Placeholder for the sidebar -->
+    <div data-component="shared/sidebar" class="placeholder"></div>
+
+    <!-- Placeholder for the footer -->
+    <div data-component="shared/footer" class="placeholder"></div>
+
+    <script src="componentLoader.js"></script>
+    <script src="router.js"></script>
+</body>
+</html>

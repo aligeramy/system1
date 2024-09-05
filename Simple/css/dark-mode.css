@@ -1,0 +1,27 @@
+/* css/dark-mode.css */
+body {
+    background-color: black;
+    color: white;
+}
+
+nav, footer, aside {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.placeholder {
+    background-color: #444;
+    height: 50px;
+    margin-bottom: 20px;
+    animation: shimmer 1s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}

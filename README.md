@@ -8,7 +8,7 @@ Load your html component files dynamically.
   
 ## Instructions
 
-### 1. Include `system1.js` before </body> tag.
+### 1. Include `system1.js`
 
 **`system1.js`**  allows you to load HTML components dynamically from a `/components` folder.
 Components like headers, footers, and menus can be modularly loaded into placeholders in your HTML.

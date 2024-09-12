@@ -14,7 +14,7 @@ Load your html component files dynamically.
 Components like headers, footers, and menus can be modularly loaded into placeholders in your HTML.
 
 #### Usage:
-- Create your HTML files and place them in the `/components` folder (e.g., `menu.html`, `footer.html`).
+- Create your HTML components (eg. menu) and place them in the `/components` folder (e.g., `components/menu.html`, `components/footer.html`).
 - In your HTML, use the `data-component` attribute to indicate where to load the component.
 
 Example:

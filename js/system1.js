@@ -1,12 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const components = document.querySelectorAll('[data-component]');
-  Promise.all(Array.from(components).map(async (component) => {
+const loadComponents = async (parent = document) => {
+  const components = parent.querySelectorAll('[data-component]');
+  await Promise.all([...components].map(async (el) => {
     try {
-      const res = await fetch(`components/${component.getAttribute('data-component')}.html`);
-      component.innerHTML = await res.text();
-      component.classList.remove('placeholder');
+      el.innerHTML = await (await fetch(`components/${el.getAttribute('data-component')}.html`)).text();
+      await loadComponents(el); // Load nested components
     } catch {
-      component.innerHTML = `<p>Error loading component</p>`;
+      el.innerHTML = '<p>Error loading component</p>';
     }
-  })).then(() => document.dispatchEvent(new Event('componentsLoaded')));
-});
+}));
+  document.dispatchEvent(new Event('componentsLoaded'));
+};
+document.addEventListener('DOMContentLoaded', () => loadComponents());

@@ -20,8 +20,13 @@ Components like headers, footers, and menus can be modularly loaded into placeho
 Example:
 
 ```html
-<!-- Loads menu component - components/menu.html -->
-<div data-component="menu"></div>
-
-<!-- Loads footer component - components/footer.html  -->
-<div data-component="footer"></div>
+<body>
+  <!-- Load HTML from "components/menu.html" -->
+  <div data-component="menu"></div>
+  ...
+  <!-- Load HTML from "components/yourComponent.html" -->
+  <div data-component="yourComponent"></div>
+  
+  <!-- Load system1 -->
+  <script src="js/system1.js"></script>
+</body>
